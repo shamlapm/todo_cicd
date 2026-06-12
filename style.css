@@ -25,6 +25,7 @@ border-radius: 20px;
 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 h1 {
+
 text-align: center;
 margin-bottom: 25px;
 color: #333;
@@ -48,7 +49,6 @@ outline: none;
 border-color: #667eea;
 }
 .todo-input button {
-
 padding: 14px 20px;
 border: none;
 border-radius: 12px;
@@ -61,6 +61,7 @@ transition: 0.3s ease;
 .todo-input button:hover {
 transform: translateY(-2px);
 }
+
 #taskList {
 list-style: none;
 }
@@ -93,17 +94,63 @@ word-break: break-word;
 text-decoration: line-through;
 color: #9a9a9a;
 }
+.actions {
+display: flex;
+gap: 8px;
+
+}
+.edit-btn,
+.save-btn,
+.cancel-btn,
+.delete-btn {
+border: none;
+border-radius: 8px;
+padding: 8px 12px;
+cursor: pointer;
+font-size: 14px;
+transition: 0.2s ease;
+}
+.edit-btn {
+background: #ffc107;
+}
+.save-btn {
+background: #28a745;
+color: white;
+}
+.cancel-btn {
+background: #6c757d;
+color: white;
+}
+.delete-btn {
+background: #dc3545;
+color: white;
+}
+.edit-btn:hover,
+.save-btn:hover,
+.cancel-btn:hover,
+.delete-btn:hover {
+opacity: 0.9;
+}
+.edit-input {
+
+flex: 1;
+padding: 10px;
+border: 2px solid #667eea;
+border-radius: 8px;
+font-size: 16px;
+}
 @media (max-width: 600px) {
 .todo-input {
 flex-direction: column;
 }
 .todo-input button {
 width: 100%;
-
 }
 .task {
 flex-wrap: wrap;
 }
+.actions {
+width: 100%;
+justify-content: flex-end;
 }
-
-
+}
